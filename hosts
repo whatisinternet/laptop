@@ -1,0 +1,5 @@
+[laptop]
+localhost
+
+[all:vars]
+user=josh

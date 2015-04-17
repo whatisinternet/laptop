@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  sudo:  true
+  vars:
+    user: josh
+    doc_root: /var/www/web
+    ruby_version: 2.2.2
+  roles:
+    - init
+    - base
+    - nodejs
+    - postgres
+    - rvm
