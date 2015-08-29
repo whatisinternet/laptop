@@ -23,7 +23,7 @@
 
   - name: Install dotfiles
     sudo: no
-    shell: git clone git://github.com/thoughtbot/dotfiles.git
+    shell: git clone git://github.com/whatisinternet/dotfiles.git
 
   - name: Install dotfiles
     sudo: no
