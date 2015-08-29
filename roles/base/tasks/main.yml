@@ -1,11 +1,4 @@
 ---
-  - name: Add required repos
-    sudo: yes
-    apt_repository: repo={{ item }} state=present
-    with_items:
-      - ppa:webupd8team/sublime-text-3
-      - ppa:webupd8team/atom
-
   - name: Update apt
     sudo: yes
     apt:  update_cache=yes
@@ -14,11 +7,6 @@
     sudo: yes
     apt:  pkg={{ item }} state=latest
     with_items:
-      - atom
-      - sublime-text-installer
-      - vim
-      - tmux
-      - git
       - vim
       - tmux
       - git
@@ -27,14 +15,6 @@
   - name: Update apt again
     sudo: yes
     apt:  update_cache=yes
-
-  - name: Download Chrome
-    sudo: no
-    shell: curl -o chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-
-  - name: Install Chrome
-    sudo: yes
-    apt: deb=chrome.deb
 
   - name: Download RCM
     sudo: no
@@ -50,7 +30,7 @@
 
   - name: Install dotfiles
     sudo: no
-    shell: git clone git://github.com/thoughtbot/dotfiles.git
+    shell: git clone git://github.com/whatisinternet/dotfiles.git
 
   - name: Install dotfiles
     sudo: no
