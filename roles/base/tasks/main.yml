@@ -24,10 +24,6 @@
     sudo: yes
     apt: deb=rcm.deb
 
-  - name: Download Oh-My-ZSH
-    sudo: no
-    shell: curl -o omzsh.sh https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh
-
   - name: Install dotfiles
     sudo: no
     shell: git clone git://github.com/whatisinternet/dotfiles.git
